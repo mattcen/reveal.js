@@ -8,7 +8,9 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<style type="text/css">
+		</style>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +18,12 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown="example.md"
+					data-separator="^---$"
+					data-separator-vertical="^----$"
+					data-separator-notes="^Notes?:"
+					data-charset="utf-8">
+				</section>
 			</div>
 		</div>
 
@@ -30,8 +36,12 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				hash: true,
-
+			hash: true,
+			transition: 'none',
+			controls: false,
+			slideNumber: 'c/t',
+			width:  560*2.5,
+			height: 300*2.5,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
