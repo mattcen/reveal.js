@@ -13,7 +13,8 @@
 		</style>
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/reveal-a11y/accessibility/helper.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -43,7 +44,12 @@
 			width:  560*2.5,
 			height: 300*2.5,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				dependencies: [
+				{ src: 'plugin/reveal-a11y/accessibility/helper.js', async: true, condition: function() {
+					return !!document.body.classList;
+				}
+				}]
 			});
 		</script>
 	</body>
