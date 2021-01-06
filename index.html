@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 		<style type="text/css">
-			.footer {
+			.header {
 			  position: absolute;
 			  display: table;
 			  top: 2%;
@@ -18,7 +18,7 @@
 			  color: $color-primary-2;
 			}
 
-			.footer span {
+			.header span {
 			  display: table-cell;
 			  padding: 0px 15px 5px;
 
@@ -27,10 +27,10 @@
 			  font-size: 70%;
 			}
 
-			.footer span:nth-of-type(1) {
+			.header span:nth-of-type(1) {
 			  text-align: left;
 			}
-			.footer span:nth-last-child(1) {
+			.header span:nth-last-child(1) {
 			  text-align: right;
 			}
 		</style>
@@ -50,7 +50,7 @@
 				</section>
 			</div>
 		</div>
-		<div id="mattcen-footer" class="footer">
+		<div id="header-content" class="header">
 			<span class="element">@mattcen</span>
 		</div>
 
@@ -81,8 +81,8 @@
 			});
 			window.addEventListener("load", function() {
 				revealDiv = document.querySelector("body div.reveal")
-				footer = document.getElementById("mattcen-footer");
-				revealDiv.appendChild(footer);
+				header = document.getElementById("header-content");
+				revealDiv.appendChild(header);
 			} );
 		</script>
 	</body>
