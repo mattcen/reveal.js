@@ -10,6 +10,29 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
 		<style type="text/css">
+			.footer {
+			  position: absolute;
+			  display: table;
+			  top: 2%;
+
+			  color: $color-primary-2;
+			}
+
+			.footer span {
+			  display: table-cell;
+			  padding: 0px 15px 5px;
+
+			  text-align: center;
+			  font-family: "Roboto Mono", monospace;
+			  font-size: 70%;
+			}
+
+			.footer span:nth-of-type(1) {
+			  text-align: left;
+			}
+			.footer span:nth-last-child(1) {
+			  text-align: right;
+			}
 		</style>
 
 		<!-- Theme used for syntax highlighted code -->
@@ -26,6 +49,9 @@
 					data-charset="utf-8">
 				</section>
 			</div>
+		</div>
+		<div id="mattcen-footer" class="footer">
+			<span class="element">@mattcen</span>
 		</div>
 
 		<script src="dist/reveal.js"></script>
@@ -53,6 +79,11 @@
 				}
 				}]
 			});
+			window.addEventListener("load", function() {
+				revealDiv = document.querySelector("body div.reveal")
+				footer = document.getElementById("mattcen-footer");
+				revealDiv.appendChild(footer);
+			} );
 		</script>
 	</body>
 </html>
